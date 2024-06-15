@@ -1,0 +1,178 @@
+{
+	"info": {
+		"_postman_id": "501207d7-25ca-4753-88ff-7a7ca430f43c",
+		"name": "jitterbit-crud-challenge",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "36286486"
+	},
+	"item": [
+		{
+			"name": "Create order",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"numeroPedido\": \"v10089015vdb-01\",\r\n\"valorTotal\": 10000,\r\n\"dataCriacao\": \"2023-07-19T12:24:11.5299601+00:00\",\r\n\"items\": [\r\n{\r\n\"idItem\": \"2434\",\r\n\"quantidadeItem\": 1,\r\n\"valorItem\": 1000\r\n}\r\n]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/order",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"order"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List order by orderId",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/order/v10089015vdb-03",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"order",
+						"v10089015vdb-03"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List all orders",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"numeroPedido\": \"v10089015vdb-01\",\r\n    \"valorTotal\": 10000,\r\n    \"dataCriacao\": \"2023-07-19T12:24:11.5299601+00:00\",\r\n    \"items\": [\r\n        {\r\n            \"idItem\": \"2434\",\r\n            \"quantidadeItem\": 1,\r\n            \"valorItem\": 1000\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/order/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"order",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update order by orderId",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"numeroPedido\": \"v10089015vdb-02\",\r\n    \"valorTotal\": 20000,\r\n    \"dataCriacao\": \"2023-07-19T12:24:11.5299601+00:00\",\r\n    \"items\": [\r\n        {\r\n            \"idItem\": \"3434\",\r\n            \"quantidadeItem\": 1,\r\n            \"valorItem\": 1000\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/order/v10089015vdb-02",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"order",
+						"v10089015vdb-02"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete order by orderId",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/order/v10089015vdb-01",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"order",
+						"v10089015vdb-01"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
